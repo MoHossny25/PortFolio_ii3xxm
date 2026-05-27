@@ -192,13 +192,13 @@ header .navbar ul li a:hover {
     right: 0;
   }
 }
-#skillsContainer {
+/* #skillsContainer {
     display: flex;
     flex-wrap: wrap;        /* السحر هنا: بتسمح للكروت تنزل سطر جديد بدل ما تخرج برا */
-    justify-content: center; /* عشان تخلي الكروت المتوزعة تيجي في النص بالظبط */
-    gap: 15px;              /* بتعمل مسافة مظبوطة وثابتة بين كل كارت والتاني */
-    width: 100%;            /* عشان تضمن إن الحاوية واخدة العرض كامل وما ترحلش الكروت */
-}
+    /* justify-content: center; /* عشان تخلي الكروت المتوزعة تيجي في النص بالظبط */
+    /* gap: 15px;              /* بتعمل مسافة مظبوطة وثابتة بين كل كارت والتاني */ */
+    /* width: 100%;            /* عشان تضمن إن الحاوية واخدة العرض كامل وما ترحلش الكروت */ */
+/* } */ */ */
 /* hamburger icon ends */
 
 /* hero section starts*/
@@ -526,14 +526,14 @@ header .navbar ul li a:hover {
 /* about section ends */
 
 /* skills section starts */
-.skills {
+/* .skills {
   min-height: 90vh;
   background: linear-gradient(to bottom, #57059e, #4a00e0);
-}
-.skills h2 {
+} */
+/* .skills h2 {
   color: #fff;
-}
-.skills .heading span {
+} */
+/* .skills .heading span {
   color: rgb(255, 230, 0);
 }
 .skills .container {
@@ -544,8 +544,8 @@ header .navbar ul li a:hover {
     width: 90%;
     margin: auto;
     margin-top: 10rem; /* غير الرقم ده من 2 لـ 5 أو أكتر حسب الرغبة */
-  
-}
+   */
+/* }
 .skills .container .row {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -579,7 +579,7 @@ header .navbar ul li a:hover {
   font-weight: 500;
   font-family: "Poppins";
   margin-left: 0.5rem;
-}
+} */
 /* skills media queries starts*/
 /* skills media queries ends*/
 /* skills section ends */
@@ -1365,18 +1365,126 @@ form .button-area {
   top: calc(100% - 12rem);
 }
 /* scroll top ends */
+/* ================= SKILLS SECTION ================= */
 
-#skillsContainer {
-    display: flex; /* تفعيل الفليكس بوكس */
-    flex-direction: row; /* ترتيب العناصر في صف واحد */
-    justify-content: center; /* توسيط العناصر في منتصف الشاشة */
-    align-items: center; /* محاذاة العناصر رأسياً */
-    flex-wrap: nowrap; /* منع العناصر من النزول لسطر جديد */
-    gap: 10px; /* المسافة بين الكروت */
-    padding: 15px;
-    width: 100%;
-    overflow-x: auto; /* إضافة شريط تمرير لو الشاشة صغرت (مهم للموبايل) */        /* التأكد من أن الحاوية تأخذ العرض كاملًا */
+.skills {
+  min-height: auto;
+  padding: 80px 9%;
+  background: linear-gradient(to bottom, #57059e, #4a00e0);
 }
+
+.skills .heading {
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+.skills .heading span {
+  color: #ffd900;
+}
+
+.skills .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  background: rgba(0, 0, 22, 0.35);
+  border-radius: 20px;
+  padding: 30px;
+}
+
+/* الشبكة */
+.skills .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+/* الكارت */
+.skills .bar {
+  background: rgba(0, 0, 22, 0.9);
+  border-radius: 16px;
+  padding: 25px 15px;
+  text-align: center;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.skills .bar:hover {
+  transform: translateY(-8px);
+  background: #000;
+}
+
+/* المحتوى */
+.skills .bar .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.skills .bar .info img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.skills .bar .info span {
+  color: #fff;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+  .skills {
+    padding: 60px 5%;
+  }
+
+  .skills .container {
+    padding: 20px;
+  }
+
+  .skills .row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .skills .bar {
+    padding: 20px 10px;
+  }
+
+  .skills .bar .info img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .skills .bar .info span {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .skills .row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .skills .bar .info span {
+    font-size: 1.2rem;
+  }
+}
+/* #skillsContainer {
+    display: flex; /* تفعيل الفليكس بوكس */
+    /* flex-direction: row; /* ترتيب العناصر في صف واحد */
+    /* justify-content: center; /* توسيط العناصر في منتصف الشاشة */ */
+    /* align-items: center; /* محاذاة العناصر رأسياً */ */
+    /* flex-wrap: nowrap; /* منع العناصر من النزول لسطر جديد */ */
+    /* gap: 10px; /* المسافة بين الكروت */ */
+    /* padding: 15px; */
+    /* width: 100%; */
+    /* overflow-x: auto; /* إضافة شريط تمرير لو الشاشة صغرت (مهم للموبايل) */        /* التأكد من أن الحاوية تأخذ العرض كاملًا */ */ */
+/* } */ */
 
 .bar {
     flex: 0 0 auto; /* منع الكروت من التمدد أو الانكماش */
