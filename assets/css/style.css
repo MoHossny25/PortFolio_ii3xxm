@@ -192,6 +192,13 @@ header .navbar ul li a:hover {
     right: 0;
   }
 }
+.skills .container .row {
+    display: flex;
+    flex-wrap: wrap; /* بتخلي الكروت تنزل سطر جديد */
+    justify-content: center; /* بتخلي الكروت في النص */
+    gap: 20px; /* بتعمل مسافة مظبوطة بين الكروت */
+    overflow: visible !important; /* عشان مفيش كارت يستخبى */
+}
 /* hamburger icon ends */
 
 /* hero section starts*/
