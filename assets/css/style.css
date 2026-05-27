@@ -192,12 +192,12 @@ header .navbar ul li a:hover {
     right: 0;
   }
 }
-.skills .container .row {
+#skillsContainer {
     display: flex;
-    flex-wrap: wrap; /* بتخلي الكروت تنزل سطر جديد */
-    justify-content: center; /* بتخلي الكروت في النص */
-    gap: 20px; /* بتعمل مسافة مظبوطة بين الكروت */
-    overflow: visible !important; /* عشان مفيش كارت يستخبى */
+    flex-wrap: wrap;        /* السحر هنا: بتسمح للكروت تنزل سطر جديد بدل ما تخرج برا */
+    justify-content: center; /* عشان تخلي الكروت المتوزعة تيجي في النص بالظبط */
+    gap: 15px;              /* بتعمل مسافة مظبوطة وثابتة بين كل كارت والتاني */
+    width: 100%;            /* عشان تضمن إن الحاوية واخدة العرض كامل وما ترحلش الكروت */
 }
 /* hamburger icon ends */
 
